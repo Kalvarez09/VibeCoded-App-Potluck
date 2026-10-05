@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Potluck Board</title>
+  <meta name="description" content="See who is bringing what to the building potluck, so it isn't five salads and no mains.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#top" aria-label="Potluck Board home">
+      <span class="brand-mark" aria-hidden="true">🍽️</span>
+      <span>Potluck Board</span>
+    </a>
+    <nav id="userArea" class="user-area" aria-label="Account"></nav>
+  </header>
+
+  <main id="top">
+    <section id="hero" class="hero" aria-live="polite"></section>
+
+    <section id="status" class="status"></section>
+
+    <section class="menu" aria-labelledby="menuTitle">
+      <div class="section-head">
+        <h2 id="menuTitle">What's on the table</h2>
+        <p id="menuHint" class="muted"></p>
+      </div>
+      <div id="foodGrid" class="grid"></div>
+    </section>
+
+    <section id="addFood" class="panel" hidden></section>
+
+    <section id="auth" class="panel auth" hidden></section>
+  </main>
+
+  <footer class="footer muted">
+    Demo app · data is saved in this browser only.
+    <button type="button" class="link" data-action="reset">Reset demo data</button>
+  </footer>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
